@@ -376,7 +376,7 @@ class TestEscalation(PropertiesTester, AlignakTest):
     properties = dict([
         ('uuid', ''),
         ('host_name', ''),
-        ('hostgroup_name', ''),
+        # ('hostgroup_name', ''),
         ('service_description', ''),
         ('contact_groups', []),
         ('contacts', []),
