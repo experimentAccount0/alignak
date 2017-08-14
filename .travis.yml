@@ -25,8 +25,8 @@ script:
   - cd test
   - touch $(python -c 'import logilab; print(logilab.__path__[0])')/__init__.py
   - pip freeze  # so to help eventual debug: know what exact versions are in use can be rather useful.
-  - nosetests -xv --process-restartworker --processes=1 --process-timeout=300  --with-coverage --cover-package=alignak --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_alignak_8d42dcd6f5_0
-  - python -m properform Push 47.88.50.110:15554 asdf_alignak_8d42dcd6f5_0 ./profile_alignak_8d42dcd6f5_0
+  - nosetests -xv --process-restartworker --processes=1 --process-timeout=300  --with-coverage --cover-package=alignak --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_alignak_8d42dcd6f5_1
+  - python -m properform Push 47.88.50.110:15554 asdf_alignak_8d42dcd6f5_1 ./profile_alignak_8d42dcd6f5_1
   - coverage combine
   - cd .. && pep8 --max-line-length=100 --exclude='*.pyc' alignak/*
   - pylint --rcfile=.pylintrc --disable=all --enable=C0111 --enable=W0403 --enable=W0106 --enable=W1401 --enable=W0614 --enable=W0107 --enable=C0204 --enable=W0109  --enable=W0223  --enable=W0311  --enable=W0404  --enable=W0623  --enable=W0633 --enable=W0640  --enable=W0105 --enable=W0141 --enable=C0325 --enable=W1201 --enable=W0231 --enable=W0611 --enable=C0326 --enable=W0122 --enable=E0102 --enable=W0401 --enable=W0622 --enable=C0103 -r no alignak/*
@@ -40,4 +40,4 @@ after_success:
   # so we need to move the .coverage file here :
   mv test/.coverage . && coveralls --rcfile=test/.coveragerc
 
- #2017-08-14 08:49:17 modified at 0
+ #2017-08-14 08:49:17 modified at 0 #2017-08-14 08:49:23 modified at 1
