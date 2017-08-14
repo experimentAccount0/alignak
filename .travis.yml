@@ -22,11 +22,11 @@ install:
 # so we must combine them in the end
 script:
   - cd test
-  - nosetests -xv --process-restartworker --processes=1 --process-timeout=999999999  --with-cov --cov=shinken --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_alignak_b16ebff4bb_3
-  - python -m properform Push 47.88.50.110:15554 asdf_alignak_b16ebff4bb_3 ./profile_alignak_b16ebff4bb_3
+  - nosetests -xv --process-restartworker --processes=1 --process-timeout=999999999  --with-cov --cov=shinken --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_alignak_b16ebff4bb_4
+  - python -m properform Push 47.88.50.110:15554 asdf_alignak_b16ebff4bb_4 ./profile_alignak_b16ebff4bb_4
   - coverage combine
   - cd .. && pep8 --max-line-length=100 --ignore=E303,E302,E301,E241 --exclude='*.pyc' shinken/*
 # specific call to launch coverage data into coveralls.io
 after_success:
   coveralls
- #2017-08-14 08:49:48 modified at 0 #2017-08-14 08:49:53 modified at 1 #2017-08-14 08:49:59 modified at 2 #2017-08-14 08:50:04 modified at 3
+ #2017-08-14 08:49:48 modified at 0 #2017-08-14 08:49:53 modified at 1 #2017-08-14 08:49:59 modified at 2 #2017-08-14 08:50:04 modified at 3 #2017-08-14 08:50:11 modified at 4
